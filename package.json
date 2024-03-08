@@ -1,0 +1,11 @@
+{
+  "name": "namste-react",
+  "version": "1.0.0",
+  "description": "this is the best way to die",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}

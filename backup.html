@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // const books = [
+        //     { title: "The Great Gatsby", author: "F. Scott Fitzgerald", pages: 180 },
+        //     { title: "To Kill a Mockingbird", author: "Harper Lee", pages: 281 },
+        //     { title: "1984", author: "George Orwell", pages: 328 },
+        //     { title: "1984", author: "George Orwell", pages: 328 },
+        //     { title: "Pride and Prejudice", author: "Jane Austen", pages: 279 },
+        //     { title: "The Catcher in the Rye", author: "J.D. Salinger", pages: 224 }
+        // ];
+        // const books = [
+        //     {
+        //         title: "The Great Gatsby",
+        //         author: "F. Scott Fitzgerald",
+        //         pages: 180,
+        //         details: {
+        //             genre: "Fiction",
+        //             publicationYear: 1925
+        //         }
+        //     },
+        //     {
+        //         title: "To Kill a Mockingbird",
+        //         author: "Harper Lee",
+        //         pages: 281,
+        //         details: {
+        //             genre: "Fiction",
+        //             publicationYear: 1960
+        //         }
+        //     },
+        //     {
+        //         title: "1984",
+        //         author: "George Orwell",
+        //         pages: 328,
+        //         details: {
+        //             genre: "Dystopian",
+        //             publicationYear: 1949
+        //         }
+        //     },
+        //     {
+        //         title: "Pride and Prejudice",
+        //         author: "Jane Austen",
+        //         pages: 279,
+        //         details: {
+        //             genre: "Romance",
+        //             publicationYear: 1813
+        //         }
+        //     },
+        //     {
+        //         title: "The Catcher in the Rye",
+        //         author: "J.D. Salinger",
+        //         pages: 224,
+        //         details: {
+        //             genre: "Coming-of-age",
+        //             publicationYear: 1951
+        //         }
+        //     },
+        //     {
+        //         title: "Harry Potter and the Philosopher's Stone",
+        //         author: "J.K. Rowling",
+        //         pages: 223,
+        //         details: {
+        //             genre: "Fantasy",
+        //             publicationYear: 1997
+        //         }
+        //     },
+        //     {
+        //         title: "The Hobbit",
+        //         author: "J.R.R. Tolkien",
+        //         pages: 310,
+        //         details: {
+        //             genre: "Fantasy",
+        //             publicationYear: 1937
+        //         }
+        //     }
+        // ];
+
+
+
+
+        const books = [
+            {
+                title: "The Great Gatsby",
+                author: "F. Scott Fitzgerald",
+                pages: 180,
+                details: {
+                    genre: "Fiction",
+                    publicationYear: 1925
+                },
+                children: [
+                    {
+                        title: "The Great Gatsby: Study Guide",
+                        author: "F. Scott Fitzgerald",
+                        pages: 50,
+                        details: {
+                            genre: "Educational",
+                            publicationYear: 2020
+                        }
+                    },
+                    {
+                        title: "The Great Gatsby: Companion",
+                        author: "F. Scott Fitzgerald",
+                        pages: 70,
+                        details: {
+                            genre: "Companion",
+                            publicationYear: 2015
+                        },
+                        children: [
+                            {
+                                title: "The Great Gatsby: Companion Workbook",
+                                author: "F. Scott Fitzgerald",
+                                pages: 30,
+                                details: {
+                                    genre: "Workbook",
+                                    publicationYear: 2017
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "To Kill a Mockingbird",
+                author: "Harper Lee",
+                pages: 281,
+                details: {
+                    genre: "Fiction",
+                    publicationYear: 1960
+                },
+                children: [
+                    {
+                        title: "To Kill a Mockingbird: Discussion Guide",
+                        author: "Harper Lee",
+                        pages: 40,
+                        details: {
+                            genre: "Educational",
+                            publicationYear: 2018
+                        }
+                    }
+                ]
+            },
+            {
+                title: "1984",
+                author: "George Orwell",
+                pages: 328,
+                details: {
+                    genre: "Dystopian",
+                    publicationYear: 1949
+                },
+                children: [
+                    {
+                        title: "1984: Study Guide",
+                        author: "George Orwell",
+                        pages: 60,
+                        details: {
+                            genre: "Educational",
+                            publicationYear: 2021
+                        }
+                    }
+                ]
+            },
+            {
+                title: "Pride and Prejudice",
+                author: "Jane Austen",
+                pages: 279,
+                details: {
+                    genre: "Romance",
+                    publicationYear: 1813
+                },
+                children: [
+                    {
+                        title: "Pride and Prejudice: Character Analysis",
+                        author: "Jane Austen",
+                        pages: 35,
+                        details: {
+                            genre: "Educational",
+                            publicationYear: 2015
+                        }
+                    }
+                ]
+            },
+            {
+                title: "The Catcher in the Rye",
+                author: "J.D. Salinger",
+                pages: 224,
+                details: {
+                    genre: "Coming-of-age",
+                    publicationYear: 1951
+                },
+                children: [
+                    {
+                        title: "The Catcher in the Rye: Review",
+                        author: "J.D. Salinger",
+                        pages: 25,
+                        details: {
+                            genre: "Educational",
+                            publicationYear: 2010
+                        }
+                    }
+                ]
+            },
+            {
+                title: "Harry Potter and the Philosopher's Stone",
+                author: "J.K. Rowling",
+                pages: 223,
+                details: {
+                    genre: "Fantasy",
+                    publicationYear: 1997
+                },
+                children: [
+                    {
+                        title: "Harry Potter: Spells and Charms",
+                        author: "J.K. Rowling",
+                        pages: 55,
+                        details: {
+                            genre: "Educational",
+                            publicationYear: 2001
+                        }
+                    }
+                ]
+            },
+            {
+                title: "The Hobbit",
+                author: "J.R.R. Tolkien",
+                pages: 310,
+                details: {
+                    genre: "Fantasy",
+                    publicationYear: 1937
+                },
+                children: [
+                    {
+                        title: "The Hobbit: Map of Middle-earth",
+                        author: "J.R.R. Tolkien",
+                        pages: 20,
+                        details: {
+                            genre: "Illustrated",
+                            publicationYear: 1950
+                        }
+                    }
+                ]
+            },
+            {
+                title: "Crime and Punishment",
+                author: "Fyodor Dostoevsky",
+                pages: 430,
+                details: {
+                    genre: "Psychological Fiction",
+                    publicationYear: 1866
+                },
+                children: [
+                    {
+                        title: "Crime and Punishment: Philosophical Analysis",
+                        author: "Fyodor Dostoevsky",
+                        pages: 75,
+                        details: {
+                            genre: "Educational",
+                            publicationYear: 2012
+                        }
+                    }
+                ]
+            },
+            {
+                title: "The Lord of the Rings: The Fellowship of the Ring",
+                author: "J.R.R. Tolkien",
+                pages: 398,
+                details: {
+                    genre: "Fantasy",
+                    publicationYear: 1954
+                },
+                children: [
+                    {
+                        title: "The Lord of the Rings: Appendices",
+                        author: "J.R.R. Tolkien",
+                        pages: 150,
+                        details: {
+                            genre: "Appendices",
+                            publicationYear: 1955
+                        }
+                    },
+                    {
+                        title: "The Lord of the Rings: Behind the Scenes",
+                        author: "J.R.R. Tolkien",
+                        pages: 100,
+                        details: {
+                            genre: "Behind the Scenes",
+                            publicationYear: 2001
+                        },
+                        children: [
+                            {
+                                title: "The Making of Middle-earth",
+                                author: "J.R.R. Tolkien",
+                                pages: 60,
+                                details: {
+                                    genre: "Documentary",
+                                    publicationYear: 2003
+                                }
+                            },
+                            {
+                                title: "Creating the Characters",
+                                author: "J.R.R. Tolkien",
+                                pages: 40,
+                                details: {
+                                    genre: "Character Development",
+                                    publicationYear: 2005
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+        ];
+        console.log(books, "books")
+        // const allBooks = books.forEach((currentElement, index, array) => {
+        //     console.log(currentElement?.title)
+        // })
+        // const Title = books.map((book) => (book.title))
+        // console.log(Title)
+
+        // const filterBooks = books.filter((book) => (book.pages > 250))
+        // console.log(filterBooks, "filterBooks")
+
+        // const TotalPages = books.reduce((accumulator, currentValue) => (accumulator + currentValue?.pages), 0)
+        // console.log(TotalPages, "TotalPages")
+
+        // const findTitle = books.find((year) => (year.title === "1984"));
+        // console.log(findTitle)
+
+        // const wittenBook = books.some((book) => (book.author === "Jane Austen"))
+        // console.log(wittenBook)
+
+        // const hundredPageBook = books.every((book) => (book.pages > 100))
+        // console.log(hundredPageBook)
+
+        // const sortedBooks = books.sort((a, b) => (a.pages - b.pages))
+        // console.log(sortedBooks)
+
+        // const modifiedBooksArray = books.forEach((book) => {
+        //     if (book > 200) {
+        //         book.isLong = true
+        //     } else {
+        //         book.isLong = false
+        //     }
+        //     console.log(book, "book")
+        // })
+
+        // const titles = books.map((book) => {
+        //     if (book.pages > 200) {
+        //         return book.title
+        //     }
+        // })
+
+        // const title = books.filter((book) => book.pages > 200).map((titles) => titles.title)
+        // console.log(title, "titles")
+
+        // const longBooks = books?.filter((longBook) => (longBook?.pages > 200)).reduce((accumulator, currentValue) => (accumulator + currentValue?.pages), 0)
+        // console.log(longBooks)
+
+        // const popularBooks = books.forEach((book) => {
+        //     if (book.pages <= 250) {
+        //         book.isPopular = true
+        //     }
+        //     else {
+        //         book.isPopular = false
+        //     }
+        //     // console.log(book)
+        // })
+        // console.log(books)
+
+        // const morePageTitle = books.filter((book) => (book?.pages <= 250)).map((titles) => titles?.title)
+        // console.log(morePageTitle)
+
+        // const fantasyBooks = books?.filter((book) => book?.details?.genre === "Fantasy").map((bookName) => bookName.title)
+        // console.log(fantasyBooks)
+
+        // const bookPageCount = books.reduce((accumulator, bookPage) => (accumulator + bookPage?.pages), 0)
+        // console.log(bookPageCount)
+
+        // const oldBook = books.some((oldB) => oldB.details.publicationYear < 2000)
+        // console.log(oldBook)
+    </script>
+
+
+
+</head>
+
+<body>
+    <h1 id="root"></h1>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+</html>
